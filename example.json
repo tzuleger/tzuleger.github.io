@@ -2,7 +2,8 @@
   "alertbanner":
   {
     "enabled": true,
-    "text":"Our response to COVID-19 is important to our employees and you. Click here to visit our COVID-19 FAQ page."
+    "text":"Our response to COVID-19 is important to our employees and you. Click here to visit our COVID-19 FAQ page.",
+    "src":"#"
   },
   "header":
   {
@@ -36,8 +37,38 @@
       "navbar-link1":
       {
         "justification":"left",
-        "text":"Left1",
+        "text":"Big Text Example",
         "input":"#"
+      },
+      "navbar-left-dropdown-1":
+      {
+        "justification":"left",
+        "dropTo":"straightdown",
+        "text":"The last one was cut off, but not this one",
+        "input":
+        {
+          "leftDropDownItem1":
+          {
+            "text":"Long Text Dropdown Item",
+            "text-color":"white",
+            "input":"#"
+          },
+          "leftDropDownItem2":
+          {
+            "text":"last one was cutoff too!",
+            "dropTo":"right",
+            "text-color":"white",
+            "input":
+            {
+              "navbar-left-dropdown-2":
+              {
+                "text":"black text example",
+                "text-color":"black",
+                "input":"#"
+              }
+            }
+          }
+        }
       },
       "navbar-link2":
       {
@@ -131,6 +162,12 @@
             }
           }
         }
+      },
+      "navbar-link5":
+      {
+        "justification":"right",
+        "text":"right1",
+        "input":"#"
       }
     }
   },
