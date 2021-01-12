@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head><title>Three Rivers Technologies</title>
+<link rel="icon" href="../imgs/favicon.ico">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Scale to device width (also includes screen res.) -->
+
+<!-- STYLESHEETS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+
+
+<!-- ALERT BANNER (example: COVID-19 information) -->
+</head><body><div class="alert alert-warning sticky-top" id="alertbanner" style="margin: 0px; display: block;">
+  <a class="navbar-brand">
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-exclamation-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+      <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"></path>
+    </svg>
+    <p class="warning-banner" style="position:relative;">
+      <href id="alert-banner-info" style="cursor:pointer;" src="#" href="/covid19.html">Our response to COVID-19... These alert banners can be useful for relaying important info.</href>
+    </p>
+  </a>
+  <div style="float:right">
+    <button type="button" class="btn btn-outline-primary" style="right:250px;background-color:transparent;border:none;" onclick="document.getElementById('alertbanner').style.display='none';document.getElementById('navbar').style.top='0px';">
+      <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-x-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<header>
+  <!-- CAROUSEL BANNER -->
+  <section>
+    <div class="trt-header-main" id="carousel-header" style="background-position: 50% 40%; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(&quot;../imgs/img1.jpg&quot;);">
+      <div class="half-column">
+        <h1 class="trt-text-header1">Three Rivers<br>&nbsp;Technologies</h1>
+        <h2 class="trt-text-header2">Invest in your company. Put trust in us.</h2>
+      </div>
+      <span class="row trt-header-subject" style="height:50%;">
+        <!-- Transparent logo aligned properly here -->
+        <span class="quarter-column" style="height:100%;"></span>
+        <span class="quarter-column" style="background-size: cover; height:100%; width:inherit; margin: auto;">
+          <img class="logo" src="../imgs/samplelogo.png">
+        </span>
+      </span>
+      <span class="row trt-header-subject" style="height:50%;">
+        <span class="quarter-column" style="height:100%;"></span>
+        <span class="quarter-column" style="height:inherit; margin:auto;">
+          <h2 id="subject" class="trt-text-header3" style="margin:auto;">Home</h2>
+        </span>
+      </span>
+    </div>
+  </section>
+  <script id="carousel-script">
+		const carouselList = [ {img:"img1.jpg", x:50, y:40}, {img:"img2.jpg", x:50, y:30}, {img:"img3.jpg", x:50, y:35} ];
+		var idx = carouselList.length-1;
+		carousel();
+
+    function carousel()
+    {
+      var header = document.getElementsByClassName('trt-header-main')[0];
+      var numImages = carouselList.length;;
+
+      idx = (++idx >= numImages) ? 0 : idx;
+
+      header.style.backgroundPosition = carouselList[idx].x + "% " + carouselList[idx].y + "%";
+      header.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../imgs/" + carouselList[idx].img + "')";
+
+      setTimeout(carousel, getTime(numImages) * 1000);
+    }
+
+    function getTime(numImages)
+    {
+      // return a time between 1-7 based on how many images are in the carousel.
+      return ((7 - (numImages / 5)) < 1) ? 1 : (7 - (numImages / 5));
+    }
+  </script>
+</header>
+
+<!-- Begin articles (navigation bar is also in the body section, as it is a sticky bar.) -->
+
+  <div class="articles-bg">
+    <link rel="stylesheet" href="../styles/style.css">
+
+
+    <script>
+    function hoverOn(e)
+    {
+      var menu = e.getElementsByClassName("dropdown-menu")[0];
+      menu.style.display = "block";
+    }
+    function hoverOff(e)
+    {
+      var menu = e.getElementsByClassName("dropdown-menu")[0];
+      menu.style.display = "none";
+    }
+    </script>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-md bg-semi-transparent sticky-top" id="navbar" style="top: 70px;">
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <div id="left-navbar" class="navbar-header" style="width:auto;">
+          <span class="justify">
+          <a id="homepage-link" href="/index.html" class="navbar-brand nav-fill navbar-item">Home Page</a></span>
+        </div>
+
+        <div id="center-navbar" class="container navbar-header" style="width:auto;">
+          <span class="justify">
+          <a id="info-link1" href="/info.html" class="navbar-brand nav-fill navbar-item">Work With Us</a><a id="info-link2" href="/careers.html" class="navbar-brand nav-fill navbar-item">Work For Us</a></span>
+        </div>
+
+        <div id="right-navbar" class="navbar-header" style="width:auto;">
+          <span class="justify">
+          <div class="navbar-brand nav-fill navbar-item dropdown" onmouseenter="hoverOn(this)" onmouseleave="hoverOff(this)"><a href="#" id="aboutus-link" class="navbar-brand nav-fill navbar-item dropdown-toggle" data-toggle="dropdown">About Us</a><div class="trt-dropdown-menu dropdown-menu drop-to-straightdown" aria-labelledby="dropdownMenuButton"><a href="/company.html" class="dropdown-item text-color-white">Our Company</a><a href="/impact.html" class="dropdown-item text-color-white">Our Impact</a><a href="/offer.html" class="dropdown-item text-color-white">Our Offer</a><a href="/ouremployees.html" class="dropdown-item text-color-white">Our Employees</a></div></div><div class="navbar-brand nav-fill navbar-item dropdown" onmouseenter="hoverOn(this)" onmouseleave="hoverOff(this)"><a href="#" id="employees-link" class="navbar-brand nav-fill navbar-item dropdown-toggle" data-toggle="dropdown">Employees</a><div class="trt-dropdown-menu dropdown-menu drop-to-straightdown" aria-labelledby="dropdownMenuButton"><a href="https://threeriverstech.sharepoint.com/sites/Internalinformation/SitePages/Home.aspx?e=1:6555154c6f4042cfb39a0413815cb559" class="dropdown-item text-color-white">Sharepoint</a><a href="/usefulinfo.html" class="dropdown-item text-color-white">Useful Info</a></div></div></span>
+        </div>
+
+      </div>
+    </nav>
+
+    <script id="article-hover">
+const IMAGE_PATH = "../imgs/";
+		imgMap = new Map();
+		imgMap.set("info-website-article", "");
+
+    function mouseOnArticle(e)
+    {
+      var articleBoxId = e.id;
+      document.getElementById(articleBoxId).style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))" + ((imgMap.get(articleBoxId) != "undefined") ? (", url('" + IMAGE_PATH + imgMap.get(articleBoxId)) : "") + "')";
+    }
+    function mouseOffArticle(e)
+    {
+      var articleBoxId = e.id;
+      document.getElementById(articleBoxId).style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))" + ((imgMap.get(articleBoxId) != "undefined") ? (", url('" + IMAGE_PATH + imgMap.get(articleBoxId)) : "") + "')";
+    }
+    </script>
+    <!-- ARTICLES -->
+    <div id="articles">
+    <article><div class="article-box" id="info-website-article" onmouseenter="mouseOnArticle(this)" onmouseleave="mouseOffArticle(this)" onclick="window.location.href = &quot;./README.txt&quot;;" style=""><h1 class="article-title">Website Building Info</h1><h2 class="article-summary">Information on how the website works</h2><h3 class="article-description"></h3></div></article></div>
+
+    <!-- STORIES -->
+    <div id="stories" style="overflow:hidden;">
+    <div id="col1" style="float:left;width:calc(100%);"><div id="col1_row1" style="overflow:hidden;display:block;" class="story-bg"><span><h1 class="story-title">Services</h1><p class="story-text">We offer our clients the most profound services our consultants have. Whether it be completing, updating, or creating from scratch, our developers can get you the service you want and need.</p></span></div></div></div>
+    <!-- FOOTER -->
+    <div class="footer">
+      <div class="third-column">
+        <img id="footer-logo" style="margin-top:90px; margin-left: 200px; height:200px;width:200px" src="../imgs/samplelogo.png">
+        <h1 id="copyright" class="footer-text2" style="margin-top:60px;"></h1>
+      </div>
+      <div id="footer-center-col" class="third-column" style="padding-top:150px;">
+      <h1 class="footer-text1 link-item" href="/info.html">Work With Us</h1><h1 class="footer-text1 link-item" href="/careers.html">Work For Us</h1></div>
+      <div id="footer-right-col" class="third-column" style="padding-top:150px;">
+      <h1 class="footer-text1 link-item" href="/company.html">Our Company</h1><h1 class="footer-text1 link-item" href="/impact.html">Our Impact</h1><h1 class="footer-text1 link-item" href="/offer.html">Our Offer</h1></div>
+    </div>
+
+
+  </div>
+
+
+</body></html>
