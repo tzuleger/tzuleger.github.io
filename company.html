@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><title>Three Rivers Technologies</title>
+<head><title>Three Rivers Technologies - Our Company</title>
 <link rel="icon" href="../imgs/favicon.ico">
 
 <meta charset="UTF-8">
@@ -13,14 +13,14 @@
 
 
 <!-- ALERT BANNER (example: COVID-19 information) -->
-</head><body><div class="alert alert-warning sticky-top" id="alertbanner" style="margin: 0px; display: block;">
+</head><body><div class="alert alert-warning sticky-top" id="alertbanner" style="margin: 0px; display: none;">
   <a class="navbar-brand">
-    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-exclamation-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-exclamation-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="margin-top:1%;">
       <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
       <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"></path>
     </svg>
-    <p class="warning-banner" style="position:relative;">
-      <href id="alert-banner-info" style="cursor:pointer;" src="#" href="/covid19.html">Our response to COVID-19... These alert banners can be useful for relaying important info.</href>
+    <p class="warning-banner" style="position:relative;margin:0%;">
+      <href id="alert-banner-info" style="cursor:pointer;" src="#"></href>
     </p>
   </a>
   <div style="float:right">
@@ -35,7 +35,7 @@
 <header>
   <!-- CAROUSEL BANNER -->
   <section>
-    <div class="trt-header-main" id="carousel-header" style="background-position: 50% 40%; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(&quot;../imgs/img1.jpg&quot;);">
+    <div class="trt-header-main" id="carousel-header" style="background-position: 0% 100%; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(&quot;../imgs/img1.jpg&quot;);">
       <div class="half-column">
         <h1 class="trt-text-header1">Three Rivers<br>&nbsp;Technologies</h1>
         <h2 class="trt-text-header2">Invest in your company. Put trust in us.</h2>
@@ -50,16 +50,16 @@
       <span class="row trt-header-subject" style="height:50%;">
         <span class="quarter-column" style="height:100%;"></span>
         <span class="quarter-column" style="height:inherit; margin:auto;">
-          <h2 id="subject" class="trt-text-header3" style="margin:auto;">Home</h2>
+          <h2 id="subject" class="trt-text-header3" style="margin:auto;">Our Company</h2>
         </span>
       </span>
     </div>
   </section>
   <script id="carousel-script">
-		const carouselList = [ {img:"img1.jpg", x:50, y:40}, {img:"img2.jpg", x:50, y:30}, {img:"img3.jpg", x:50, y:35} ];
+		const carouselList = [ {img:"img1.jpg", x:0, y:100}, {img:"img2.jpg", x:20, y:50}, {img:"img3.jpg", x:0, y:100} ];
 		var idx = carouselList.length-1;
 		carousel();
-
+		
     function carousel()
     {
       var header = document.getElementsByClassName('trt-header-main')[0];
@@ -85,8 +85,8 @@
 
   <div class="articles-bg">
     <link rel="stylesheet" href="../styles/style.css">
-
-
+    
+    
     <script>
     function hoverOn(e)
     {
@@ -101,7 +101,7 @@
     </script>
 
     <!-- NAVIGATION BAR -->
-    <nav class="navbar navbar-expand-md bg-semi-transparent sticky-top" id="navbar" style="top: 70px;">
+    <nav class="navbar navbar-expand-md bg-semi-transparent sticky-top" id="navbar">
       <div class="collapse navbar-collapse" id="navbarCollapse">
 
         <div id="left-navbar" class="navbar-header" style="width:auto;">
@@ -116,17 +116,13 @@
 
         <div id="right-navbar" class="navbar-header" style="width:auto;">
           <span class="justify">
-          <div class="navbar-brand nav-fill navbar-item dropdown" onmouseenter="hoverOn(this)" onmouseleave="hoverOff(this)"><a href="#" id="aboutus-link" class="navbar-brand nav-fill navbar-item dropdown-toggle" data-toggle="dropdown">About Us</a><div class="trt-dropdown-menu dropdown-menu drop-to-straightdown" aria-labelledby="dropdownMenuButton"><a href="/company.html" class="dropdown-item text-color-white">Our Company</a><a href="/impact.html" class="dropdown-item text-color-white">Our Impact</a><a href="/offer.html" class="dropdown-item text-color-white">Our Offer</a><a href="/ouremployees.html" class="dropdown-item text-color-white">Our Employees</a></div></div><div class="navbar-brand nav-fill navbar-item dropdown" onmouseenter="hoverOn(this)" onmouseleave="hoverOff(this)"><a href="#" id="employees-link" class="navbar-brand nav-fill navbar-item dropdown-toggle" data-toggle="dropdown">Employees</a><div class="trt-dropdown-menu dropdown-menu drop-to-straightdown" aria-labelledby="dropdownMenuButton"><a href="https://threeriverstech.sharepoint.com/sites/Internalinformation/SitePages/Home.aspx?e=1:6555154c6f4042cfb39a0413815cb559" class="dropdown-item text-color-white">Sharepoint</a><a href="/usefulinfo.html" class="dropdown-item text-color-white">Useful Info</a></div></div></span>
+          <div class="navbar-brand nav-fill navbar-item dropdown" onmouseenter="hoverOn(this)" onmouseleave="hoverOff(this)"><a href="#" id="aboutus-link" class="navbar-brand nav-fill navbar-item dropdown-toggle" data-toggle="dropdown">About Us</a><div class="trt-dropdown-menu dropdown-menu drop-to-straightdown" aria-labelledby="dropdownMenuButton"><a href="/company.html" class="dropdown-item text-color-white">Our Company</a><a href="/impact.html" class="dropdown-item text-color-white">Our Impact</a><a href="/offer.html" class="dropdown-item text-color-white">Our Offer</a></div></div></span>
         </div>
 
       </div>
     </nav>
 
     <script id="article-hover">
-const IMAGE_PATH = "../imgs/";
-		imgMap = new Map();
-		imgMap.set("info-website-article", "");
-
     function mouseOnArticle(e)
     {
       var articleBoxId = e.id;
@@ -138,14 +134,15 @@ const IMAGE_PATH = "../imgs/";
       document.getElementById(articleBoxId).style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))" + ((imgMap.get(articleBoxId) != "undefined") ? (", url('" + IMAGE_PATH + imgMap.get(articleBoxId)) : "") + "')";
     }
     </script>
-    <!-- ARTICLES -->
-    <div id="articles">
-    <article><div class="article-box" id="info-website-article" onmouseenter="mouseOnArticle(this)" onmouseleave="mouseOffArticle(this)" onclick="window.location.href = &quot;./README.txt&quot;;" style=""><h1 class="article-title">Website Building Info</h1><h2 class="article-summary">Information on how the website works</h2><h3 class="article-description"></h3></div></article></div>
-
     <!-- STORIES -->
     <div id="stories" style="overflow:hidden;">
-    <div id="col1" style="float:left;width:calc(100%);"><div id="col1_row1" style="overflow:hidden;display:block;" class="story-bg"><span><h1 class="story-title">Our History</h1><pre class="story-text">Three Rivers Technologies was established in 1999 by TJ Stenger...
+    <div id="col1" style="float:left;width:calc(100%);"><div id="col1_row1" style="overflow:hidden;display:block;" class="story-bg-one-col"><span><h1 class="story-title">Our History</h1><pre class="story-text">With the vision of providing high quality software solutions, Three Rivers Technologies was founded by TJ Stenger in 1999. Over the past 20 years, our company has built up from a small number of manual testers to a team of over 25 highly skilled developers and has continued to serve the La Crosse and Rochester areas for over 20 years. From manual testing, automated testing, and software development, our team has the expertise and can help you in the areas most needed.
 </pre></span></div></div></div>
+
+    <!-- ARTICLES -->
+    <div id="articles">
+    </div>
+
     <!-- FOOTER -->
     <div class="footer">
       <div class="third-column">
@@ -153,12 +150,10 @@ const IMAGE_PATH = "../imgs/";
         <h1 id="copyright" class="footer-text2" style="margin-top:60px;"></h1>
       </div>
       <div id="footer-center-col" class="third-column" style="padding-top:150px;">
-      <h1 class="footer-text1 link-item" href="/info.html">Work With Us</h1><h1 class="footer-text1 link-item" href="/careers.html">Work For Us</h1></div>
+      <h1 class="footer-text1 link-item"><a class="footer-text1 link-item" style="text-decoration: none;" href="/info.html">Work With Us</a></h1><h1 class="footer-text1 link-item"><a class="footer-text1 link-item" style="text-decoration: none;" href="/careers.html">Work For Us</a></h1></div>
       <div id="footer-right-col" class="third-column" style="padding-top:150px;">
-      <h1 class="footer-text1 link-item" href="/company.html">Our Company</h1><h1 class="footer-text1 link-item" href="/impact.html">Our Impact</h1><h1 class="footer-text1 link-item" href="/offer.html">Our Offer</h1></div>
+      <h1 class="footer-text1 link-item"><a class="footer-text1 link-item" style="text-decoration: none;" href="/company.html">Our Company</a></h1><h1 class="footer-text1 link-item"><a class="footer-text1 link-item" style="text-decoration: none;" href="/impact.html">Our Impact</a></h1><h1 class="footer-text1 link-item"><a class="footer-text1 link-item" style="text-decoration: none;" href="/offer.html">Our Offer</a></h1></div>
     </div>
-
-
   </div>
 
 
